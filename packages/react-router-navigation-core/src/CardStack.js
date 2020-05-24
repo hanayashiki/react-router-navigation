@@ -74,7 +74,7 @@ export default class CardStack extends React.Component<Props, State> {
     backHandler.removeEventListener('hardwareBackPress', this.onNavigateBack)
   }
 
-  componentWillReceiveProps(nextProps: Props) {
+  UNSAFE_componentWillReceiveProps(nextProps: Props) {
     const { children: nextChildren, history } = nextProps
     const { location } = history
     const { cards, historyRootIndex, navigationState } = this.state
